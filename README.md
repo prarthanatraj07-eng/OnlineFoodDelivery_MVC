@@ -4,7 +4,7 @@ A full-stack web application developed using **Java 17**, **Jakarta Servlets**, 
 
 The application provides a complete food ordering experience where customers can register, browse restaurants, order food, complete payments, track deliveries, and download invoices. It also includes an administrator portal for managing restaurants, menus, customer orders, and dashboard statistics.
 
-The project follows a layered architecture to separate presentation, business logic, and database operations, making the application easier to maintain and extend.
+The frontend is built using JSP, HTML, and CSS with server-side rendering through JSP. The user interface is implemented without external UI frameworks such as Bootstrap. The project follows a layered architecture to separate presentation, business logic, and database operations, making the application easier to maintain and extend.
 
 ---
 
@@ -63,7 +63,7 @@ The project emphasizes clean architecture, modular design, secure authentication
 - JDBC with Prepared Statements
 - BCrypt Password Hashing
 - Session-Based Authentication
-- Responsive Bootstrap Interface
+- CSS Styled Interface (no CSS frameworks)
 - Maven Build System
 - Apache Tomcat Deployment
 - MySQL Database Integration
@@ -76,7 +76,7 @@ The project emphasizes clean architecture, modular design, secure authentication
 |----------|------------|
 | Language | Java 17 |
 | Architecture | Model-View-Controller (MVC) |
-| Frontend | JSP, HTML5, CSS3, Bootstrap 5, JavaScript |
+| Frontend | JSP, HTML, CSS |
 | Backend | Jakarta Servlets |
 | Database | MySQL 8 |
 | Database Connectivity | JDBC |
@@ -96,10 +96,10 @@ The project emphasizes clean architecture, modular design, secure authentication
 - Single restaurant cart validation to prevent mixed orders.
 - Coupon support during checkout.
 - Simulated payment methods (Cash on Delivery, UPI, and Card).
-- Real-time order tracking with delivery status progression.
-- Printable invoice generation after successful orders.
+- 7-stage order tracking with server-side JSTL-rendered status stepper.
+- Printable invoice generation after successful orders (Ctrl+P).
 - Administrator dashboard for restaurant and order management.
-- Responsive user interface built with Bootstrap.
+- Clean interface built with JSP, HTML, and CSS only.
 
 #  Application Preview
 
@@ -228,7 +228,7 @@ Examples include:
 
 ### View
 
-The View layer is implemented using JSP pages and Bootstrap.
+The View layer is implemented using JSP pages, HTML, and CSS.
 
 It is responsible for:
 
@@ -237,7 +237,7 @@ It is responsible for:
 - Showing menus
 - Managing the shopping cart
 - Checkout and payment pages
-- Order tracking
+- Order tracking (7-stage JSTL stepper)
 - Invoice display
 - Administrator pages
 
@@ -340,8 +340,8 @@ OnlineFoodDelivery-Java-MVC
 │       │
 │       └── webapp/
 │           ├── assets/
-│           │   ├── css/
-│           │   └── js/
+│           │   └── css/
+│           │       └── style.css
 │           │
 │           ├── WEB-INF/
 │           │   ├── views/
@@ -830,7 +830,7 @@ Each layer has a well-defined responsibility, making the application easier to m
 
 | Layer | Responsibility |
 |--------|----------------|
-| View | Builds the user interface using JSP and Bootstrap |
+| View | Builds the user interface using JSP and HTML |
 | Controller | Handles HTTP requests using Jakarta Servlets |
 | Service | Implements business logic and application rules |
 | DAO | Performs database operations using JDBC |
@@ -926,7 +926,6 @@ This project was developed using the following open-source technologies:
 - Apache Tomcat
 - MySQL
 - Maven
-- Bootstrap
 - Git
 - GitHub
 
@@ -941,7 +940,7 @@ I would like to thank the developer communities and official documentation of th
 | **Project** | OnlineFoodDelivery-Java-MVC |
 | **Architecture** | Model–View–Controller (MVC) |
 | **Language** | Java 17 |
-| **Frontend** | JSP, HTML5, CSS3, Bootstrap 5 |
+| **Frontend** | JSP, HTML, CSS |
 | **Backend** | Jakarta Servlets |
 | **Database** | MySQL 8 |
 | **Database Access** | JDBC |
